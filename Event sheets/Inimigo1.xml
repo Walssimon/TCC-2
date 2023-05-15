@@ -1,0 +1,746 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Inimigo1</name>
+    <events>
+        <event-block sid="647575107215661">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="848754430355183" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="796385648728732" type="Gvilao1">
+                    <param id="0" name="X">Inimigo1.X</param>
+                    <param id="1" name="Y">Inimigo1.Y</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="459651960396228">
+                    <conditions>
+                        <condition id="7" name="Is mirrored" sid="742481599959567" type="Inimigo1" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="124917734655119" type="Gvilao1">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="567742624147078">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="610110491838006" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="531950005268535" type="Gvilao1">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-group description="" sid="150121155583712" title="MOVIMENTACAO">
+            <sub-events>
+                <event-block sid="513426390072405">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="241798124169574" type="System">
+                            <param id="0" name="Object">Inimigo1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="981323135047798">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="278828079776965" type="Inimigo1">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Player.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="413554467983724" type="Inimigo1">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="438561393094834">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="816579383295304" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="187913458985092" type="Inimigo1">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="382502430021092">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="534604485810997" type="Inimigo1">
+                                    <param id="0" name="Instance variable">ativo</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="474470280102603" type="Inimigo1">
+                                    <param id="0" name="Instance variable">ataque</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="307660632740759" type="Inimigo1">
+                                    <param id="0" name="Instance variable">HIT</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="494013520104604" type="Gvilao1">
+                                    <param id="0" name="Animation">&quot;IDLE&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="706789997145806">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="184335653146108" type="System">
+                            <param id="0" name="Object">Inimigo1</param>
+                            <param id="1" name="Expression">distance(0,Inimigo1.X,0,Player.X)</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">1500</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="424667978824810">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="230703598279950" type="Inimigo1">
+                                    <param id="0" name="Instance variable">ativo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="111711760017183" type="Inimigo1">
+                                    <param id="0" name="Instance variable">ativo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="733760738475943">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="252485194868969" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="487349253031550">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="828408941826523" type="Inimigo1">
+                                    <param id="0" name="Instance variable">ativo</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="184773894490785" type="Inimigo1">
+                                    <param id="0" name="Instance variable">ativo</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="283866382526465">
+                    <conditions>
+                        <condition id="-33" name="Pick by comparison" sid="372471926631383" type="System">
+                            <param id="0" name="Object">Inimigo1</param>
+                            <param id="1" name="Expression">distance(Inimigo1.X,Inimigo1.X,Player.X,Player.X)</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">60</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="333280751157195" type="Inimigo1">
+                            <param id="0" name="Instance variable">ativo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="277255705045780" type="Inimigo1">
+                            <param id="0" name="Instance variable">ativo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="819268324357383">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="106331857373546" type="Inimigo1">
+                                    <param id="0" name="Instance variable">decisao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="372978981351924" type="System">
+                                    <param id="0" name="First value">Inimigo1.X</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">Player.X</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="727031057064826" type="Inimigo1">
+                                    <param id="0" name="Instance variable">ataque</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="525933251928710" type="Gvilao1">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="785526161280224" type="Inimigo1">
+                                    <param id="0" name="Instance variable">decisao_atual</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="421126320970407" type="Gvilao1">
+                                    <param id="0" name="Speed">7</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="572125927984859" type="Inimigo1">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="707574315514269">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="965115124332209" type="Inimigo1">
+                                    <param id="0" name="Instance variable">decisao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="984581696831025" type="System">
+                                    <param id="0" name="First value">Inimigo1.X</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">Player.X</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="458127959541942" type="Inimigo1">
+                                    <param id="0" name="Instance variable">ataque</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="531878638805335" type="Gvilao1">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="141969284797633" type="Inimigo1">
+                                    <param id="0" name="Instance variable">decisao_atual</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="487144282995417" type="Gvilao1">
+                                    <param id="0" name="Speed">7</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="544300897666312" type="Inimigo1">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="388146591521940">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="625530961469305" type="Inimigo1">
+                                    <param id="0" name="Instance variable">decisao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="714046346080599" type="Gvilao1">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="746975726339369" type="Inimigo1">
+                                    <param id="0" name="Instance variable">decisao_atual</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="706597108830735" type="Gvilao1">
+                                    <param id="0" name="Speed">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="110370481628730">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="785127827556337" type="Inimigo1">
+                                    <param id="0" name="Instance variable">decisao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="323974459089297" type="Gvilao1">
+                                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="651857049024628" type="Inimigo1">
+                                    <param id="0" name="Instance variable">decisao_atual</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                                <action id="6" name="Set speed" sid="998870715222355" type="Gvilao1">
+                                    <param id="0" name="Speed">7</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="615883201940207">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="925298079911689" type="Inimigo1">
+                                            <param id="0" name="Comparison">4</param>
+                                            <param id="1" name="X co-ordinate">Player.X</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="204890958739718" type="System" />
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                                <event-block disabled="1" sid="353994656087259">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="106840670046597" type="System" />
+                                        <condition id="-4" name="Trigger once while true" sid="250013557107515" type="System" />
+                                    </conditions>
+                                    <actions />
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="666311977540302">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="363905628712689" type="Inimigo1">
+                            <param id="0" name="Instance variable">Distancia</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="514376574437132" type="Inimigo1">
+                            <param id="0" name="Instance variable">deciao_timer</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="282326620912920">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="235778114331794" type="Inimigo1">
+                            <param id="0" name="Instance variable">Distancia</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="510586038039180" type="Inimigo1">
+                            <param id="0" name="Instance variable">deciao_timer</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="792035316920605">
+                            <conditions>
+                                <condition id="-23" name="While" sid="944136386394106" type="System" />
+                                <condition id="-7" name="Compare instance variable" sid="100879043216031" type="Inimigo1">
+                                    <param id="0" name="Instance variable">decisao</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Inimigo1.decisao_atual</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="841123928934813" type="Inimigo1">
+                                    <param id="0" name="Instance variable">decisao</param>
+                                    <param id="1" name="Value">choose(1,2,3)</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="733169045008750">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="186992362054911" type="Inimigo1">
+                                            <param id="0" name="Instance variable">decisao</param>
+                                            <param id="1" name="Comparison">1</param>
+                                            <param id="2" name="Value">Inimigo1.decisao_atual</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="101793049343853" type="Inimigo1">
+                                            <param id="0" name="Instance variable">decisao</param>
+                                            <param id="1" name="Value">random(0.5,2)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="814297879150807" title="Ataque">
+            <sub-events>
+                <event-block sid="636066242796966">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="703330731963524" type="Inimigo1">
+                            <param id="0" name="Instance variable">ataque</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="685483882754842">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="705453543634354" type="Gvilao1">
+                                    <param id="0" name="Animation">&quot;ATKS1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="458166765111663" type="System">
+                                    <param id="0" name="Seconds">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="434728341963814">
+                    <conditions>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="709551949816434" type="Inimigo1">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="711944252989480" type="Inimigo1">
+                            <param id="0" name="Instance variable">ativo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="198213571924819" type="Inimigo1">
+                            <param id="0" name="Instance variable">ataque</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="613313682738053" type="Inimigo1">
+                            <param id="0" name="Instance variable">ativo</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="186781256560125">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="760410939122127" type="Player">
+                                    <param id="0" name="Instance variable">VIVO</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="846834644765735" type="Inimigo1">
+                                    <param id="0" name="Instance variable">ataque</param>
+                                </condition>
+                                <condition id="-7" inverted="1" name="Compare instance variable" sid="367882323636845" type="Player">
+                                    <param id="0" name="Instance variable">estado</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;DANO&quot;</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="837574962728681" type="Inimigo1">
+                                    <param id="0" name="Instance variable">HIT</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="798007490806324" type="Inimigo1">
+                                    <param id="0" name="Instance variable">AtaqueTimer</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0.1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="703596397392597" type="Inimigo1">
+                                    <param id="0" name="Instance variable">AtaqueTimer</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="640636880490258" type="Gvilao1">
+                                    <param id="0" name="Animation">&quot;ATKS1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="390159121735143">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="770571744650194" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="523209699086007" type="Gvilao1">
+                                    <param id="0" name="Animation">&quot;IDLE&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="804949807162406" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="260456668722059" type="Inimigo1">
+                                    <param id="0" name="Instance variable">AtaqueTimer</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="127094050026077">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="703767762050047" type="System" />
+                        <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="458924121813677" type="Inimigo1">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="562792901133329" type="Inimigo1">
+                            <param id="0" name="Instance variable">AtaqueTimer</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="139027339266614" type="Inimigo1">
+                            <param id="0" name="Instance variable">ativo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="919484341488416" type="Inimigo1">
+                            <param id="0" name="Instance variable">ataque</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="877777361990133">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="776899537478774" type="Gvilao1">
+                                    <param id="0" name="Animation">&quot;ATKS1&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="794265106604169" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="138093855369063" type="Inimigo1">
+                                    <param id="0" name="Instance variable">AtaqueTimer</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="947417867046335" title="INIMIGO_DANO">
+            <sub-events>
+                <event-block disabled="1" sid="162176896818181">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="558688926515292" type="Animation_HITBOX">
+                            <param id="0" name="Object">Inimigo1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="-13" name="Set boolean" sid="730420884441151" type="Inimigo1">
+                            <param id="0" name="Instance variable">HIT</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="117095646735315">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="864115510245850" type="Inimigo1">
+                            <param id="0" name="Object">Animation_HITBOX</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="839393826488574" type="Inimigo1">
+                            <param id="0" name="Instance variable">HIT</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="509068210427383" type="Inimigo1">
+                            <param id="0" name="Instance variable">HIT</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="671147429467508" type="Player">
+                            <param id="0" name="Instance variable">Acerto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="780923889454205" type="Inimigo1">
+                            <param id="0" name="Instance variable">inivida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="995415973200557" type="Player">
+                            <param id="0" name="Instance variable">combo_timer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="445288265999966">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="437807874811396" type="Inimigo1">
+                            <param id="0" name="Object">Animation</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="147991885300072" type="Inimigo1">
+                            <param id="0" name="Instance variable">HIT</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="524922850544931" type="Player">
+                            <param id="0" name="Instance variable">Atk2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="325608239569025" type="Inimigo1">
+                            <param id="0" name="Instance variable">HIT</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="686540498353088" type="Player">
+                            <param id="0" name="Instance variable">Acerto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="740396840035476" type="Inimigo1">
+                            <param id="0" name="Instance variable">inivida</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="777395175901087" type="Player">
+                            <param id="0" name="Instance variable">combo_timer</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="470923282130563">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="815958473224675" type="Inimigo1">
+                            <param id="0" name="Instance variable">HIT</param>
+                        </condition>
+                        <condition id="7" name="Is mirrored" sid="375285540953029" type="Animation" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="509976643174544" type="Gvilao1">
+                            <param id="0" name="Animation">&quot;HIT&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="714557560439767" type="Inimigo1">
+                            <param id="0" name="Max Speed">1000</param>
+                        </action>
+                        <action behavior="Platform" id="2" name="Set acceleration" sid="769709755868646" type="Inimigo1">
+                            <param id="0" name="Acceleration">5600</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="531292845651108" type="Inimigo1">
+                            <param id="0" name="Vector X">-90</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="998718429754231" type="Inimigo1">
+                            <param id="0" name="Vector Y">50</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="858301899056291" type="System">
+                            <param id="0" name="Group name">&quot;MOVIMENTACAO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="481529897313461">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="815078321236565" type="Gvilao1">
+                                    <param id="0" name="Animation">&quot;HIT&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="499014132591523" type="System">
+                                    <param id="0" name="Group name">&quot;MOVIMENTACAO&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="372458947864422" type="Inimigo1">
+                                    <param id="0" name="Instance variable">HIT</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="937322596438631" type="Inimigo1">
+                                    <param id="0" name="Max Speed">410</param>
+                                </action>
+                                <action behavior="Platform" id="2" name="Set acceleration" sid="316849813019862" type="Inimigo1">
+                                    <param id="0" name="Acceleration">1300</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="512302565205636">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="195646172737383" type="Inimigo1">
+                            <param id="0" name="Instance variable">HIT</param>
+                        </condition>
+                        <condition id="7" inverted="1" name="Is mirrored" sid="703473607261751" type="Animation" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="355887659780997" type="Gvilao1">
+                            <param id="0" name="Animation">&quot;HIT&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="652896480223021" type="Inimigo1">
+                            <param id="0" name="Max Speed">1000</param>
+                        </action>
+                        <action behavior="Platform" id="2" name="Set acceleration" sid="880736505413175" type="Inimigo1">
+                            <param id="0" name="Acceleration">5600</param>
+                        </action>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="774475639528475" type="Inimigo1">
+                            <param id="0" name="Vector X">90</param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="828497672625168" type="Inimigo1">
+                            <param id="0" name="Vector Y">50</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="100793261123296" type="System">
+                            <param id="0" name="Group name">&quot;MOVIMENTACAO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="926503878259209">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="538445530424355" type="Gvilao1">
+                                    <param id="0" name="Animation">&quot;HIT&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Set group active" sid="732101591305542" type="System">
+                                    <param id="0" name="Group name">&quot;MOVIMENTACAO&quot;</param>
+                                    <param id="1" name="State">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="417718133397642" type="Inimigo1">
+                                    <param id="0" name="Instance variable">HIT</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="701479929007304" type="Inimigo1">
+                                    <param id="0" name="Max Speed">410</param>
+                                </action>
+                                <action behavior="Platform" id="2" name="Set acceleration" sid="263394763222799" type="Inimigo1">
+                                    <param id="0" name="Acceleration">1300</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="725139413985987" title="MORTE">
+            <sub-events>
+                <event-block sid="431241300211122">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="482460970991622" type="Inimigo1">
+                            <param id="0" name="Instance variable">inivida</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Set group active" sid="964632639378974" type="System">
+                            <param id="0" name="Group name">&quot;INIMIGO_DANO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="629132924938955" type="Gvilao1">
+                            <param id="0" name="Animation">&quot;MORTE&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-12" name="Set group active" sid="117866829483524" type="System">
+                            <param id="0" name="Group name">&quot;MOVIMENTACAO&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="428551063247329" type="System">
+                            <param id="0" name="Seconds">1.3</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="803339424022678">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="587244212684514" type="Gvilao1">
+                                    <param id="0" name="Animation">&quot;MORTE&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="355571056151866" type="Inimigo1" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="179965490219086">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="654880573238796" type="Player">
+                    <param id="0" name="Object">Inimigo1</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="229036755933900" type="Player">
+                    <param id="0" name="Instance variable">Atk2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="780678560383583" type="Function">
+                    <param id="0" name="Name">&quot;Dano&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-12" name="Subtract from" sid="537188136499341" type="Player">
+                    <param id="0" name="Instance variable">Vida</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

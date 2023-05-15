@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>inventario</name>
+    <events>
+        <variable constant="0" name="frame" sid="763648642512548" static="0" type="number">0</variable>
+        <event-block any="1" sid="645495998669373">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="925757198956712" type="Keyboard">
+                    <param id="0" name="Key">73</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="871668238005753">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="833282056133037" type="inventario">
+                            <param id="0" name="Instance variable">aberto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="497722407711554" type="inventario">
+                            <param id="0" name="Instance variable">aberto</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="977603757511843">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="574484440441469" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="551010150630220" type="inventario">
+                            <param id="0" name="Instance variable">aberto</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="945769829090160">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="351189084416986" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">1</param>
+                    <param id="2" name="Object clicked">pretofundo</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set boolean" sid="265607680404052" type="inventario">
+                    <param id="0" name="Instance variable">aberto</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="349042207728405" title="inventarioaberto">
+            <sub-events>
+                <event-block sid="735348822929511">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="405341759892402" type="inventario">
+                            <param id="0" name="Instance variable">aberto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set layer visible" sid="429924244973060" type="System">
+                            <param id="0" name="Layer">5</param>
+                            <param id="1" name="Visibility">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="230504370049164" type="inventario">
+                            <param id="0" name="X">914</param>
+                            <param id="1" name="Y">487</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="226746288264370" type="select">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="902979715430578" title="posicaoframe">
+            <sub-events>
+                <event-block sid="944979192955498">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="364378122726521" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="618837201676440" type="select">
+                            <param id="0" name="X">inventario.X=687</param>
+                            <param id="1" name="Y">inventario.Y=418</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="706525172127663">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="138245324332219" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="633173608110667" type="select">
+                            <param id="0" name="X">inventario.X=848</param>
+                            <param id="1" name="Y">inventario.Y=418</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="945701914726122">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="908195484345511" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="582860559819598" type="select">
+                            <param id="0" name="X">inventario.X=1007</param>
+                            <param id="1" name="Y">inventario.Y=418</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="765242301890778">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="505986915668228" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="280563359946469" type="select">
+                            <param id="0" name="X">inventario.X=1169</param>
+                            <param id="1" name="Y">inventario.Y=418</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="449218521568468">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="461474460389892" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="194477869623986" type="select">
+                            <param id="0" name="X">inventario.X=687</param>
+                            <param id="1" name="Y">inventario.Y=581</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="649061381563079">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="117475432706430" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="498470929429772" type="select">
+                            <param id="0" name="X">inventario.X=848</param>
+                            <param id="1" name="Y">inventario.Y=581</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="991678202223840">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="145966906134995" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="644713149406893" type="select">
+                            <param id="0" name="X">inventario.X=1007</param>
+                            <param id="1" name="Y">inventario.Y=581</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="111941122387054">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="410131075941087" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="352652036098050" type="select">
+                            <param id="0" name="X">inventario.X=1169</param>
+                            <param id="1" name="Y">inventario.Y=581</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="664572728615429">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="782086347475690" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">9</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="789271241565330" type="select">
+                            <param id="0" name="X">inventario.X=687</param>
+                            <param id="1" name="Y">inventario.Y=740</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="907324453381095">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="254750986667890" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="445048123124430" type="select">
+                            <param id="0" name="X">inventario.X=848</param>
+                            <param id="1" name="Y">inventario.Y=740</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="253808186293769">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="330712097656958" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="682918152484958" type="select">
+                            <param id="0" name="X">inventario.X=1007</param>
+                            <param id="1" name="Y">inventario.Y=740</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="812681571839108">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="390558513622166" type="System">
+                            <param id="0" name="Variable">frame</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">12</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="877986189648361" type="select">
+                            <param id="0" name="X">inventario.X=1169</param>
+                            <param id="1" name="Y">inventario.Y=740</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="692958748797111" title="inventariofechado" />
+        <event-block sid="110180014843942">
+            <conditions>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="209444676375904" type="inventario">
+                    <param id="0" name="Instance variable">aberto</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-4" name="Set layer visible" sid="877643529950052" type="System">
+                    <param id="0" name="Layer">5</param>
+                    <param id="1" name="Visibility">0</param>
+                </action>
+                <action id="-3" name="Set position" sid="797481770414829" type="inventario">
+                    <param id="0" name="X">914</param>
+                    <param id="1" name="Y">1811</param>
+                </action>
+                <action id="-15" name="Set visible" sid="165474168693431" type="select">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
